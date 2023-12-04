@@ -1,0 +1,28 @@
+import axios from 'axios'
+import { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
+
+
+function Singleproduct () {
+    const obj = useParams()
+    const [data,setdata]=useState("")
+    console.log(obj.id)
+    useEffect(()=>{
+        axios.get(`https://dummyjson.com/products/${obj.id}`)
+        .then((res)=>{
+            setdata(res.data)
+        })
+    },[])
+  return (
+    <div>
+        {
+            <>
+            <h1>{data.title}</h1>
+            <img src={data.thumbnail} alt="" />
+            </>
+        }
+    </div>
+  )
+}
+
+export default Singleproduct

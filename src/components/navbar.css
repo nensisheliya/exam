@@ -1,0 +1,23 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Playpen Sans';
+    text-decoration: none;
+    color: rgba(86, 84, 84, 0.976);
+}
+.container{
+    max-width: 1140px;
+    margin: auto;
+}
+#meesho{
+    color: #551a4b;
+    font-size: 35px;
+}
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+nav{
+    gap: 30px;
+}
